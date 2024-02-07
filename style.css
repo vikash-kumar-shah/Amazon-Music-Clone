@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:#030404;
+    color:#ffff;
+    font-family: 'Oswald', sans-serif;
+    /* border: 0.5px solid red; */
+    font-weight: 500;
+
+}
+
+nav{
+    /* border: 2px solid red; */
+    height: 10vh;
+    border-bottom: 0.2px solid rgba(128, 128, 128, 0.441);
+}
+ul{
+    display: flex;
+    justify-content:space-around;
+    align-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 3%;
+    list-style-type: none;
+    height: 100%;
+    width: 40%;
+    /* border: 2px solid white; */
+    font-size: 16px;
+}
+#amz{
+    margin-top: 0.8rem;
+    height: 30px;
+    width:140px;
+    /* z-index: -100; */
+    /* border: 2px solid red; */
+}
+
+svg{
+    height: 23px;
+    width: 23px;
+}
+
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+}
+
+.mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 100vw;
+    flex-direction: row;
+    /* border: 1px solid red; */
+
+}
+.left-mid,.right-mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    /* border: 1px solid red; */
+    flex-direction: column;
+}
+
+
+
+#player{
+    max-width:  70%; /* Ensure the image does not exceed the width of the parent div */
+    max-height: 70%; /* Ensure the image does not exceed the height of the parent div */
+    /* width: auto; 
+    height: auto;  */
+    display: block;
+    /* margin: 0 auto; Center the image horizontally within the parent div */
+    border-radius: 100%;
+}
+.heading{
+    height: 10%;
+    width: 80%;
+    /* border: 1px solid red; */
+    font-size: 40px;
+    text-align: center;
+    /* border-bottom: 0.1px solid rgba(255, 255, 255, 0.359); */
+    padding-bottom: 16px;
+    border-top: none;
+}
+.music-set{
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+    gap: 5%;
+    margin-top: 3%;
+    height: 100%;
+    width: 80%;
+    /* border: 1px solid red; */
+    /* background-color: rgba(255, 255, 255, 0.819); */
+}
+.list{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    height: 15%;
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.379);
+    font-family:'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+.list:hover{
+    opacity: 0.5;
+}
+.icon-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+    /* border: 1px solid pink; */
+}
+#player-icon{
+    
+    height: 90%;
+    width: 100%;
+    /* border: 1px solid brown; */
+}
+#music-name{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    /* text-align: center; */
+    /* border: 1px solid red; */
+    width: 90%;
+}
+
+#progress{
+    width: 80vw;
+    cursor: pointer;
+    /* transition: width 20s ease; */
+}
+
+
+
+
+.rotate {
+    /* Set the animation properties */
+    animation-name: spin;
+    animation-duration: 10s; /* Duration of the animation */
+    animation-iteration-count: infinite; /* Make the animation repeat infinitely */
+    animation-timing-function: linear; /* Linear timing function for constant speed */
+  }
+  
+  /* Define the keyframes for the animation */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg); /* Start rotation from 0 degrees */
+    }
+    to {
+      transform: rotate(360deg); /* Rotate to 360 degrees */
+    }
+  }
+
+
+
+
+.bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 11vh;
+    width: 100vw;
+    /* border: 1px solid yellow; */
+}
+.control{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 30vh;
+    margin-top: 2%;
+}
+.btns{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1000px) and (min-width: 750px) {
+    ul{
+        width: 100%;
+    }
+    #player-icon{
+    
+        height: 50%;
+        width: 70%;
+    }
+    .heading{
+        font-size: 30px;
+        margin-top: 5%;
+    }
+    #music-name{
+        font-size: 15px;
+    }
+    .btns{
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+    .music-set{
+    margin-top: 0%;
+    }
+    .icon-container{
+        height: 100%;
+        width: 20%;
+    }
+    #music-name{
+        width: 80%;
+    }
+
+    
+}
+
+@media screen and (max-width: 749px) and (min-width: 622px) {
+    ul{
+        width: 100%;
+    }
+    .heading{
+        margin-top: 5%;
+        font-size: 20px;
+    }
+    .icon-container{
+        width: 20%;
+    }
+    #music-name{
+        width: 80%;
+    }
+    .btns{
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+
+}
+@media screen and (max-width: 623px) and (min-width: 495px) {
+    ul{
+        width: 100%;
+    }
+    .mid{
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+    .left-mid{
+        margin-top: 15%;
+    }
+    .right-mid{
+        /* overflow: scroll; */
+        width: 70%;
+        /* height: 50%; */
+        /* border: 2px solid red; */
+    }
+    .heading{
+        font-size: 20px;
+    }
+    .music-set{
+        overflow-y: scroll;
+        /* scrollbar-width: none; */
+        width: 100%;
+        /* border: 2px solid white; */
+    }
+    .list{
+        height: 40%;
+    }
+    .icon-container{
+        height: 100%;
+        width: 45%;
+    }
+    #music-name{
+        width: 80%;
+    }
+    .btns{
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+    .bar{
+        margin-top: 15%;
+    }
+    .music-set {
+        height: 300px;
+        overflow-y: auto;
+    }
+    .music-set::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    .music-set::-webkit-scrollbar-track {
+    background: #f1f1f19b;
+    }
+    
+    .music-set::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+    }
+    
+    .music-set::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+}
+
+@media screen and (max-width: 494px) and (min-width: 0px){
+    ul{
+        width: 100%;
+    }
+    .mid{
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+    .left-mid{
+        /* border: 2px solid red; */
+        height: 50%;
+        /* margin-top: -8px; */
+    }
+    .right-mid{
+        width: 70%;
+    }
+    .heading{
+        font-size: 20px;
+    }
+    .music-set{
+        overflow-y: scroll;
+        /* scrollbar-width: none; */
+        width: 100%;
+        /* border: 2px solid white; */
+    }
+    .list{
+        height: 50%;
+    }
+    .icon-container{
+        height: 100%;
+        width: 50%;
+    }
+    #music-name{
+        width: 80%;
+    }
+    .btns{
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+    .bar{
+        margin-top: 15%;
+    }
+    .music-set {
+        height: 300px;
+        overflow-y: auto;
+    }
+    .music-set::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    .music-set::-webkit-scrollbar-track {
+    background: #f1f1f19b;
+    }
+    
+    .music-set::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+    }
+    
+    .music-set::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+    .delete{
+        display: none;
+    }
+}
